@@ -1,0 +1,41 @@
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(0,10)
+y = x*2
+plt.title("Graph1")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.plot(x,y)
+plt.show()
+
+x = np.arange(0,10)
+y = x*2
+z = x**2
+fig,plot1=plt.subplots(figsize=(8,5))
+left,bottom,width,height = [0.3,0.5,0.14,0.15]
+plot2 = fig.add_axes([left,bottom,width,height])
+plot1.plot(x,y,color="orange")
+plot2.plot(x,y)
+
+x = np.arange(0,10)
+y = x*2
+z = x**2
+plt.figure(figsize=(10,4.5))
+plt.subplot(2,2,1)
+plt.plot(x,y,linestyle="dashed",color="blue")
+plt.subplot(2,2,2)
+plt.plot(x,z,color="red")
+plt.show()
+
+x = np.arange(0,10)
+y = x*2
+z = x**2
+plt.figure(figsize=(10,4.5))
+plt.subplot(2,2,1)
+plt.plot(x,y,linestyle="dashed",color="blue")
+plt.subplot(2,2,2)
+plt.plot(x,z,color="red")
+plt.subplot(2,2,3)
+plt.plot(x,y,linestyle="dashed",color="blue")
+plt.subplot(2,2,4)
+plt.plot(x,z,color="red")
